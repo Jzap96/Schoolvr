@@ -1,0 +1,877 @@
+fileFormatVersion: 2
+guid: 248ef24727a99e7418810f7e324ace35
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'angry_002_FBX' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Kimberly_Spine' has translation animation
+      that will be discarded.\n\t'Kimberly_Spine1' has translation animation that
+      will be discarded.\n\t'Kimberly_Neck' has translation animation that will be
+      discarded.\n\t'Kimberly_Head' has translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: angry_002_FBX
+      takeName: angry_002_FBX
+      internalID: -7222446631169491699
+      firstFrame: 96
+      lastFrame: 251
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Kimberly_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Kimberly_RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: angry_002(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_Hips
+      parentName: angry_002(Clone)
+      position: {x: 0, y: 0.85959476, z: 0}
+      rotation: {x: 0.008935624, y: 0.056354884, z: 0.0044210986, w: 0.99836105}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_Spine
+      parentName: Kimberly_Hips
+      position: {x: -0.0000000033178367, y: 0.07041865, z: 0.0000000023283064}
+      rotation: {x: 0.0106716, y: -0.012689675, z: 0.00009619469, w: 0.99986255}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_Spine1
+      parentName: Kimberly_Spine
+      position: {x: -0.00000000547152, y: 0.19549426, z: -0.0000000041909516}
+      rotation: {x: -0.043064043, y: -0.012710768, z: -0.0002567841, w: 0.99899143}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_Neck
+      parentName: Kimberly_Spine1
+      position: {x: 0.000000019092113, y: 0.21645507, z: -0.0000000055879354}
+      rotation: {x: 0.0357108, y: 0.01954063, z: -0.02438928, w: 0.9988734}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_Head
+      parentName: Kimberly_Neck
+      position: {x: -0.000000019092113, y: 0.13810103, z: 0.017630732}
+      rotation: {x: 0.024327675, y: 0.019025661, z: -0.014460258, w: 0.9994184}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_HeadEnd
+      parentName: Kimberly_Head
+      position: {x: -0, y: 0.1763072, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftShoulder
+      parentName: Kimberly_Spine1
+      position: {x: -0.035217527, y: 0.15291086, z: -0.00036377367}
+      rotation: {x: 0.0063082925, y: -0.12562516, z: -0.04975371, w: 0.9908093}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftArm
+      parentName: Kimberly_LeftShoulder
+      position: {x: -0.10769926, y: -0.000000029802322, z: -0.000000009313226}
+      rotation: {x: -0.17875741, y: 0.1365332, z: 0.112294436, w: 0.9678815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftForeArm
+      parentName: Kimberly_LeftArm
+      position: {x: -0.2917216, y: -0.000000048428774, z: -0.000000029802322}
+      rotation: {x: 0.1646527, y: 0.02099104, z: -0.011454961, w: 0.98606175}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHand
+      parentName: Kimberly_LeftForeArm
+      position: {x: -0.23280275, y: 0.00000005401671, z: 0.000000018626451}
+      rotation: {x: 0.1724411, y: -0.1917592, z: -0.066365585, w: 0.9638921}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandThumb1
+      parentName: Kimberly_LeftHand
+      position: {x: -0.023081621, y: -0.026229078, z: 0.036720764}
+      rotation: {x: 0.29414812, y: 0.31213805, z: -0.34099957, w: 0.8365202}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandThumb2
+      parentName: Kimberly_LeftHandThumb1
+      position: {x: -0.027826846, y: -0.000000006519258, z: 0.000000014901161}
+      rotation: {x: 0.050999586, y: -0.032708302, z: -0.006896701, w: 0.99813914}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandThumb3
+      parentName: Kimberly_LeftHandThumb2
+      position: {x: -0.023783803, y: -0.000000014901161, z: 0.000000033527613}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LThumb3End
+      parentName: Kimberly_LeftHandThumb3
+      position: {x: -0.020966275, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandIndex1
+      parentName: Kimberly_LeftHand
+      position: {x: -0.09442482, y: -0.000000059604645, z: 0.03672076}
+      rotation: {x: 0.14022417, y: 0.062449545, z: 0.070752844, w: 0.98561215}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandIndex2
+      parentName: Kimberly_LeftHandIndex1
+      position: {x: -0.041872934, y: -0.0000000033760443, z: -0.000000010244548}
+      rotation: {x: -0.00000013411041, y: -0.0000011920924, z: 0.0335064, w: 0.9994385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandIndex3
+      parentName: Kimberly_LeftHandIndex2
+      position: {x: -0.020936497, y: 0.0000000041909516, z: 0.000000011641532}
+      rotation: {x: -0.00000039462464, y: 0.0000003808018, z: 0.033510406, w: 0.99943846}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LIndex3End
+      parentName: Kimberly_LeftHandIndex3
+      position: {x: -0.018456277, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandMiddle1
+      parentName: Kimberly_LeftHand
+      position: {x: -0.09442482, y: 0.000000037252903, z: 0.012170308}
+      rotation: {x: 0.08192823, y: 0.036171433, z: 0.058057856, w: 0.994288}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandMiddle2
+      parentName: Kimberly_LeftHandMiddle1
+      position: {x: -0.04606026, y: 0.000000037252903, z: -0.000000011175871}
+      rotation: {x: -0.00000018626444, y: -0.0000024549654, z: 0.033503357, w: 0.9994386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandMiddle3
+      parentName: Kimberly_LeftHandMiddle2
+      position: {x: -0.025123794, y: -0.000000041909516, z: -0.0000000055879354}
+      rotation: {x: -0.00000037906517, y: 0.000000027445594, z: 0.033511173, w: 0.9994384}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LMiddle3End
+      parentName: Kimberly_LeftHandMiddle3
+      position: {x: -0.022147533, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandRing1
+      parentName: Kimberly_LeftHand
+      position: {x: -0.08917902, y: 0.000000020489097, z: -0.012170315}
+      rotation: {x: -0.042869914, y: 0.04326311, z: 0.063427225, w: 0.9961263}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandRing2
+      parentName: Kimberly_LeftHandRing1
+      position: {x: -0.041872986, y: -0.00000004284084, z: 0.000000014901161}
+      rotation: {x: -0.00000006332991, y: -0.00000045821048, z: 0.03350692, w: 0.9994385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandRing3
+      parentName: Kimberly_LeftHandRing2
+      position: {x: -0.020936526, y: -0.000000026077032, z: 0.0000000018626451}
+      rotation: {x: 0.000000011711153, y: -0.00000088616326, z: 0.033512387, w: 0.9994383}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LRing3End
+      parentName: Kimberly_LeftHandRing3
+      position: {x: -0.018456277, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandPinky1
+      parentName: Kimberly_LeftHand
+      position: {x: -0.0839332, y: 0.000000022351742, z: -0.036720768}
+      rotation: {x: -0.06975497, y: 0.047614384, z: 0.06103583, w: 0.99455607}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandPinky2
+      parentName: Kimberly_LeftHandPinky1
+      position: {x: -0.033498332, y: 0.000000033527613, z: -0.000000022351742}
+      rotation: {x: 0.00000008940694, y: 0.00000008568165, z: 0.033505213, w: 0.9994385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftHandPinky3
+      parentName: Kimberly_LeftHandPinky2
+      position: {x: -0.016749198, y: -0.00000002142042, z: -9.313226e-10}
+      rotation: {x: -0.00000004348987, y: -0.0000009907071, z: 0.03351048, w: 0.99943835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LPinky3End
+      parentName: Kimberly_LeftHandPinky3
+      position: {x: -0.014765021, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightShoulder
+      parentName: Kimberly_Spine1
+      position: {x: 0.035217524, y: 0.15291077, z: -0.000363769}
+      rotation: {x: 0.006043036, y: 0.12530963, z: 0.047788326, w: 0.99094766}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightArm
+      parentName: Kimberly_RightShoulder
+      position: {x: 0.107699275, y: 0.000000010244548, z: 0.000000007450581}
+      rotation: {x: -0.15113233, y: -0.124686554, z: -0.097526886, w: 0.9757565}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightForeArm
+      parentName: Kimberly_RightArm
+      position: {x: 0.2917216, y: 0.000000040978193, z: 0.000000015832484}
+      rotation: {x: 0.13224868, y: 0.014022035, z: -0.0018710201, w: 0.9911156}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHand
+      parentName: Kimberly_RightForeArm
+      position: {x: 0.23280276, y: 0.000000024214387, z: 0.000000009080395}
+      rotation: {x: 0.15288043, y: 0.24358061, z: 0.053687707, w: 0.9562498}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandThumb1
+      parentName: Kimberly_RightHand
+      position: {x: 0.023081617, y: -0.026229136, z: 0.03672078}
+      rotation: {x: 0.3840873, y: -0.26529214, z: 0.33506814, w: 0.8184293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandThumb2
+      parentName: Kimberly_RightHandThumb1
+      position: {x: 0.027826846, y: 0.000000027939677, z: -0.000000037252903}
+      rotation: {x: 0.050999273, y: 0.03270956, z: 0.0068974253, w: 0.9981391}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandThumb3
+      parentName: Kimberly_RightHandThumb2
+      position: {x: 0.02378388, y: -0.000000009313226, z: 0.000000011175871}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RThumb3End
+      parentName: Kimberly_RightHandThumb3
+      position: {x: 0.020966275, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandIndex1
+      parentName: Kimberly_RightHand
+      position: {x: 0.094424866, y: 0.0000000037252903, z: 0.03672079}
+      rotation: {x: 0.16950323, y: -0.13496584, z: 0.0064065424, w: 0.97622323}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandIndex2
+      parentName: Kimberly_RightHandIndex1
+      position: {x: 0.041872934, y: 0.00000002142042, z: 0}
+      rotation: {x: 0.00000019371507, y: -0.0000014603136, z: -0.033503655, w: 0.9994386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandIndex3
+      parentName: Kimberly_RightHandIndex2
+      position: {x: 0.020936446, y: -0.000000029802322, z: 0.000000020954758}
+      rotation: {x: -0.00000019972657, y: -0.0000012813217, z: -0.033511367, w: 0.9994384}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RIndex3End
+      parentName: Kimberly_RightHandIndex3
+      position: {x: 0.018456277, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandMiddle1
+      parentName: Kimberly_RightHand
+      position: {x: 0.09442481, y: 0.000000044703484, z: 0.012170285}
+      rotation: {x: 0.05447607, y: -0.1042626, z: -0.06477426, w: 0.990942}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandMiddle2
+      parentName: Kimberly_RightHandMiddle1
+      position: {x: 0.046060257, y: 0.00000003259629, z: -0.000000014901161}
+      rotation: {x: 0.00000011920926, y: -0.0000013187524, z: -0.03350556, w: 0.9994386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandMiddle3
+      parentName: Kimberly_RightHandMiddle2
+      position: {x: 0.02512377, y: -0.000000066589564, z: -0.000000006519258}
+      rotation: {x: 0.00000016393588, y: 0.00000068659693, z: -0.03350608, w: 0.9994386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RMiddle3End
+      parentName: Kimberly_RightHandMiddle3
+      position: {x: 0.022147533, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandRing1
+      parentName: Kimberly_RightHand
+      position: {x: 0.08917902, y: 0.000000044703484, z: -0.012170325}
+      rotation: {x: -0.0976033, y: -0.067365184, z: -0.08366081, w: 0.9894122}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandRing2
+      parentName: Kimberly_RightHandRing1
+      position: {x: 0.041872986, y: -0.0000000059371814, z: 0}
+      rotation: {x: -0.00000018626449, y: -0.00000086426724, z: -0.03350477, w: 0.99943864}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandRing3
+      parentName: Kimberly_RightHandRing2
+      position: {x: 0.0209365, y: -0.000000052154064, z: -9.313226e-10}
+      rotation: {x: 0.00000035071884, y: 0.0000029025111, z: -0.033511143, w: 0.99943835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RRing3End
+      parentName: Kimberly_RightHandRing3
+      position: {x: 0.018456277, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandPinky1
+      parentName: Kimberly_RightHand
+      position: {x: 0.08393318, y: 0.000000018626451, z: -0.03672078}
+      rotation: {x: -0.1581392, y: -0.04960621, z: -0.08131468, w: 0.9828119}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandPinky2
+      parentName: Kimberly_RightHandPinky1
+      position: {x: 0.033498384, y: 0.000000003259629, z: 0.0000000055879354}
+      rotation: {x: -0.00000016391267, y: -0.00000004097817, z: -0.033505853, w: 0.9994385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightHandPinky3
+      parentName: Kimberly_RightHandPinky2
+      position: {x: 0.016749129, y: 0.000000031664968, z: -0.000000005122274}
+      rotation: {x: 0.000000054100646, y: -0.0000007680104, z: -0.03350153, w: 0.9994387}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RPinky3End
+      parentName: Kimberly_RightHandPinky3
+      position: {x: 0.014765021, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftUpLeg
+      parentName: Kimberly_Hips
+      position: {x: -0.088153616, y: 0.000000026717316, z: -0.0000000027939677}
+      rotation: {x: 0.01059293, y: -0.002421216, z: -0.06359875, w: 0.9979164}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftLeg
+      parentName: Kimberly_LeftUpLeg
+      position: {x: -0.0000000037252903, y: -0.36007136, z: 0.000000006519258}
+      rotation: {x: 0.10989741, y: -0.0000000013969839, z: 0.000000008847565, w: 0.9939429}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftFoot
+      parentName: Kimberly_LeftLeg
+      position: {x: -0.000000011175871, y: -0.42247897, z: 0.000000007450581}
+      rotation: {x: -0.116678454, y: -0.10987704, z: 0.033498213, w: 0.98650444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LeftToeBase
+      parentName: Kimberly_LeftFoot
+      position: {x: 0.0000000018626451, y: -0.057299852, z: 0.13223046}
+      rotation: {x: -0.00055916124, y: -0.000000003914466, z: -0.0000000023865143,
+        w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_LToeEnd
+      parentName: Kimberly_LeftToeBase
+      position: {x: -0, y: 0, z: 0.03526144}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightUpLeg
+      parentName: Kimberly_Hips
+      position: {x: 0.088153616, y: -0.000000026717316, z: 0.0000000027939677}
+      rotation: {x: -0.020555299, y: -0.010065022, z: 0.06592151, w: 0.9975623}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightLeg
+      parentName: Kimberly_RightUpLeg
+      position: {x: 0.000000011175871, y: -0.36007136, z: 9.313226e-10}
+      rotation: {x: 0.09976501, y: 0.0000000041909516, z: 0.0000000017753338, w: 0.99501103}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightFoot
+      parentName: Kimberly_RightLeg
+      position: {x: 0.0000000037252903, y: -0.42247897, z: -0.000000022351742}
+      rotation: {x: -0.100649334, y: -0.03305738, z: -0.029254029, w: 0.9939422}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RightToeBase
+      parentName: Kimberly_RightFoot
+      position: {x: -0.000000007450581, y: -0.057299852, z: 0.13223046}
+      rotation: {x: 0.014629948, y: 2.9103833e-10, z: -9.604266e-10, w: 0.999893}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kimberly_RToeEnd
+      parentName: Kimberly_RightToeBase
+      position: {x: -0, y: 0, z: 0.03526144}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
