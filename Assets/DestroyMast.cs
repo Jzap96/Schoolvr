@@ -1,9 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class SawInteraction : MonoBehaviour
 {
-    public GameObject objectToSpawn; // e.g. WoodLog prefab
+    [Header("What object should appear after cutting?")]
+    public GameObject objectToSpawn; // Prefab to spawn (e.g., WoodLog)
+
     private XRGrabInteractable grabInteractable;
     private bool isHeld = false;
 
@@ -14,7 +16,7 @@ public class SawInteraction : MonoBehaviour
         grabInteractable.selectExited.AddListener(OnRelease);
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         grabInteractable.selectEntered.RemoveListener(OnGrab);
         grabInteractable.selectExited.RemoveListener(OnRelease);
@@ -30,24 +32,25 @@ public class SawInteraction : MonoBehaviour
         isHeld = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!isHeld) return; // Only works if player is holding the saw
+        // Only works if player is holding the saw
+        if (!isHeld) return;
 
-        if (collision.gameObject.CompareTag("Tree"))
+        // Check if it’s the correct object
+        if (other.CompareTag("Tree"))
         {
-            // Store position & rotation before destroying
-            Vector3 spawnPos = collision.transform.position;
-            Quaternion spawnRot = collision.transform.rotation;
+            Vector3 spawnPos = other.transform.position;
+            Quaternion spawnRot = other.transform.rotation;
 
-            // Destroy the tree
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
 
-            // Spawn the new object
             if (objectToSpawn != null)
             {
                 Instantiate(objectToSpawn, spawnPos, spawnRot);
             }
+
+            Debug.Log("Tree cut and replaced!");
         }
     }
 }

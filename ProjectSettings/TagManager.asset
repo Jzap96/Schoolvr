@@ -7,6 +7,9 @@ TagManager:
   - Bottle
   - Key
   - Tree
+  - Hammer
+  - Wood
+  - Nail
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - key
   - Water
   - UI
-  - 
+  - Wood
   - 
   - 
   - 
