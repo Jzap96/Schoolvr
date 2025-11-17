@@ -7,8 +7,11 @@ public class HammerNailInteraction : MonoBehaviour
     public string nailTag = "Nail";         // Tag of the nail object
 
     [Header("Hit Settings")]
-    public float velocityThreshold = 1.5f;  // Minimum impact speed to count as a “good hit”
+    public float velocityThreshold = 0f;  // Minimum impact speed to count as a “good hit”
     public int hitsToStopParticles = 3;     // Number of good hits required
+
+    [Header("Nail Settings")]
+    public float nailMoveDistance = 0.05f; // How much the nail moves per hit
 
     private Rigidbody rb;                   // Hammer’s Rigidbody
     private int goodHits = 0;               // Counter for successful hits
@@ -29,23 +32,24 @@ public class HammerNailInteraction : MonoBehaviour
             return;
 
         // Measure how fast the hammer was moving on impact
-        float impactSpeed = rb.velocity.magnitude;
+        Vector3 impactVelocity = collision.relativeVelocity;
+        float impactSpeed = impactVelocity.magnitude;
 
         if (impactSpeed >= velocityThreshold)
         {
             goodHits++;
             Debug.Log($"Good hit #{goodHits}! Velocity: {impactSpeed:F2}");
 
+            // Move the nail slightly forward into the wood
+            MoveNail(collision.gameObject);
+
             if (goodHits >= hitsToStopParticles)
             {
                 StopWaterParticles();
             }
         }
-        else
-        {
-            Debug.Log($"Weak hit ignored (velocity: {impactSpeed:F2})");
-        }
     }
+
 
     private void StopWaterParticles()
     {
@@ -55,4 +59,11 @@ public class HammerNailInteraction : MonoBehaviour
             Debug.Log("Water particle system stopped after 3 good hits!");
         }
     }
+
+    private void MoveNail(GameObject nail)
+    {
+        float moveDistance = 1.0f; // adjust for each hit
+    nail.transform.position += nail.transform.forward * moveDistance;
+    }
+
 }

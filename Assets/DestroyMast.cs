@@ -3,8 +3,21 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SawInteraction : MonoBehaviour
 {
-    [Header("What object should appear after cutting?")]
-    public GameObject objectToSpawn; // Prefab to spawn (e.g., WoodLog)
+    [Header("Object to activate when cutting the CORRECT mast")]
+    public GameObject correctReplacementObject;
+
+    [Header("Animator to play when correct mast is cut")]
+    public Animator animationToPlay;
+    public string animationTriggerName = "PlayCutAnimation";
+
+    [Header("Tag for the correct mast")]
+    public string correctMastTag = "CorrectMast";
+
+    [Header("Tag for a wrong mast")]
+    public string wrongMastTag = "WrongMast";
+
+    [Header("Game Over UI")]
+    public GameObject gameOverUI;  // <-- UI that will become visible on loss
 
     private XRGrabInteractable grabInteractable;
     private bool isHeld = false;
@@ -12,6 +25,7 @@ public class SawInteraction : MonoBehaviour
     void Start()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
+
         grabInteractable.selectEntered.AddListener(OnGrab);
         grabInteractable.selectExited.AddListener(OnRelease);
     }
@@ -34,23 +48,47 @@ public class SawInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Only works if player is holding the saw
         if (!isHeld) return;
 
-        // Check if it’s the correct object
-        if (other.CompareTag("Tree"))
+        // -----------------------------------------
+        // ✔ PLAYER CUT THE CORRECT MAST
+        // -----------------------------------------
+        if (other.CompareTag(correctMastTag))
         {
-            Vector3 spawnPos = other.transform.position;
-            Quaternion spawnRot = other.transform.rotation;
+            Debug.Log("Correct mast cut!");
 
-            Destroy(other.gameObject);
+            if (correctReplacementObject != null)
+                correctReplacementObject.SetActive(true);
 
-            if (objectToSpawn != null)
-            {
-                Instantiate(objectToSpawn, spawnPos, spawnRot);
-            }
+            if (animationToPlay != null)
+                animationToPlay.SetTrigger(animationTriggerName);
 
-            Debug.Log("Tree cut and replaced!");
+            other.gameObject.SetActive(false);
+            return;
         }
+
+        // -----------------------------------------
+        // ✖ PLAYER CUT THE WRONG MAST
+        // -----------------------------------------
+        if (other.CompareTag(wrongMastTag))
+        {
+            Debug.Log("Wrong mast cut! Player loses.");
+            LoseGame();
+        }
+    }
+
+    // --------------------------
+    // LOSS LOGIC (UI ONLY)
+    // --------------------------
+    private void LoseGame()
+    {
+        Debug.Log("GAME OVER!");
+
+        // 1. Turn on UI
+        if (gameOverUI != null)
+            gameOverUI.SetActive(true);
+
+        // ✔ Player can still move & interact.
+        // Nothing else is disabled.
     }
 }
