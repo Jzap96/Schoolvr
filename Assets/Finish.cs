@@ -3,52 +3,81 @@ using UnityEngine;
 public class HammerNailInteraction : MonoBehaviour
 {
     [Header("References")]
-    public ParticleSystem waterParticles;   // Water particle system to stop
-    public string nailTag = "Nail";         // Tag of the nail object
+    public ParticleSystem waterParticles;
+    public string nailTag = "Nail";
 
     [Header("Hit Settings")]
-    public float velocityThreshold = 0f;  // Minimum impact speed to count as a “good hit”
-    public int hitsToStopParticles = 3;     // Number of good hits required
+    public float velocityThreshold = 0.5f;
+    public int hitsToStopParticles = 3;
+    public float hitCooldown = 0.1f;
 
     [Header("Nail Settings")]
-    public float nailMoveDistance = 0.05f; // How much the nail moves per hit
+    public float nailMoveDistance = 0.01f;
+    public float maxNailDepth = 0.03f;
 
-    private Rigidbody rb;                   // Hammer’s Rigidbody
-    private int goodHits = 0;               // Counter for successful hits
+    private VRVelocityTracker velocityTracker;
+    private float lastHitTime = 0f;
+
+    private int goodHits = 0;
+    private float currentDepth = 0f;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        if (rb == null)
-        {
-            Debug.LogWarning("No Rigidbody found on hammer!");
-        }
+        velocityTracker = GetComponent<VRVelocityTracker>();
+        if (velocityTracker == null)
+            Debug.LogWarning("VRVelocityTracker missing on hammer!");
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        // Only count hits on the nail
-        if (!collision.gameObject.CompareTag(nailTag))
+        if (!other.CompareTag(nailTag))
             return;
 
-        // Measure how fast the hammer was moving on impact
-        Vector3 impactVelocity = collision.relativeVelocity;
-        float impactSpeed = impactVelocity.magnitude;
+        // cooldown between hits
+        if (Time.time - lastHitTime < hitCooldown)
+            return;
 
-        if (impactSpeed >= velocityThreshold)
+        lastHitTime = Time.time;
+
+        float impactSpeed = velocityTracker.Velocity.magnitude;
+
+        if (impactSpeed >= velocityThreshold && currentDepth < maxNailDepth)
         {
             goodHits++;
-            Debug.Log($"Good hit #{goodHits}! Velocity: {impactSpeed:F2}");
+            Debug.Log($"Good hit #{goodHits}! Speed: {impactSpeed:F2}");
 
-            // Move the nail slightly forward into the wood
-            MoveNail(collision.gameObject);
+            MoveNail(other.gameObject);
 
             if (goodHits >= hitsToStopParticles)
-            {
                 StopWaterParticles();
-            }
         }
     }
+
+    private void MoveNail(GameObject nailPart)
+    {
+        Transform nailRoot = nailPart.transform.root;
+
+        // 1. Calculate remaining distance
+        float remaining = maxNailDepth - currentDepth;
+        if (remaining <= 0f) return; // nail fully hammered
+
+        // 2. Move nail by step
+        float moveStep = Mathf.Min(nailMoveDistance, remaining);
+        currentDepth += moveStep;
+
+        nailRoot.position += nailRoot.forward * moveStep; // move into wood
+
+        Debug.Log($"Moved nail {nailRoot.name} by {moveStep}. Current depth: {currentDepth}");
+
+        // 3. Check for WoodPlacement and stop water
+        WoodPlacement wood = nailRoot.GetComponentInParent<WoodPlacement>();
+        if (wood != null && goodHits >= hitsToStopParticles)
+        {
+            wood.StopWaterUnderneath();
+            Debug.Log("Stopped water under this wood!");
+        }
+    }
+
 
 
     private void StopWaterParticles()
@@ -56,14 +85,7 @@ public class HammerNailInteraction : MonoBehaviour
         if (waterParticles != null && waterParticles.isPlaying)
         {
             waterParticles.Stop();
-            Debug.Log("Water particle system stopped after 3 good hits!");
+            Debug.Log("Water particle system stopped after max hits!");
         }
     }
-
-    private void MoveNail(GameObject nail)
-    {
-        float moveDistance = 1.0f; // adjust for each hit
-    nail.transform.position += nail.transform.forward * moveDistance;
-    }
-
 }

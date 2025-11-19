@@ -12,6 +12,7 @@ TagManager:
   - Nail
   - WrongMast
   - CorrectMast
+  - Water
   layers:
   - Default
   - TransparentFX
