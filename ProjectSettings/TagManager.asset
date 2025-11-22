@@ -13,6 +13,9 @@ TagManager:
   - WrongMast
   - CorrectMast
   - Water
+  - Box
+  - Trail
+  - WaterParticle
   layers:
   - Default
   - TransparentFX

@@ -1,91 +1,72 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI; // Needed for UI
 
-public class HammerNailInteraction : MonoBehaviour
+public class HammerStopWater : MonoBehaviour
 {
-    [Header("References")]
-    public ParticleSystem waterParticles;
-    public string nailTag = "Nail";
-
-    [Header("Hit Settings")]
+    [Header("Settings")]
+    public string waterParticleTag = "WaterParticle";
     public float velocityThreshold = 0.5f;
-    public int hitsToStopParticles = 3;
     public float hitCooldown = 0.1f;
 
-    [Header("Nail Settings")]
-    public float nailMoveDistance = 0.01f;
-    public float maxNailDepth = 0.03f;
+    [Header("UI")]
+    public GameObject victoryUI; // Assign your "Congratulations" panel here
 
     private VRVelocityTracker velocityTracker;
     private float lastHitTime = 0f;
-
-    private int goodHits = 0;
-    private float currentDepth = 0f;
 
     void Start()
     {
         velocityTracker = GetComponent<VRVelocityTracker>();
         if (velocityTracker == null)
             Debug.LogWarning("VRVelocityTracker missing on hammer!");
+
+        // Hide UI at start
+        if (victoryUI != null)
+            victoryUI.SetActive(false);
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag(nailTag))
-            return;
-
-        // cooldown between hits
-        if (Time.time - lastHitTime < hitCooldown)
-            return;
-
+        // Cooldown check
+        if (Time.time - lastHitTime < hitCooldown) return;
         lastHitTime = Time.time;
 
-        float impactSpeed = velocityTracker.Velocity.magnitude;
+        float impactSpeed = velocityTracker != null ? velocityTracker.Velocity.magnitude : 0f;
+        if (impactSpeed < velocityThreshold) return;
 
-        if (impactSpeed >= velocityThreshold && currentDepth < maxNailDepth)
+        // Only act on water particles
+        if (other.CompareTag(waterParticleTag))
         {
-            goodHits++;
-            Debug.Log($"Good hit #{goodHits}! Speed: {impactSpeed:F2}");
+            ParticleSystem ps = other.GetComponent<ParticleSystem>();
+            if (ps != null && ps.isPlaying)
+            {
+                ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+                Debug.Log($"Stopped water particle: {ps.name}");
+            }
 
-            MoveNail(other.gameObject);
-
-            if (goodHits >= hitsToStopParticles)
-                StopWaterParticles();
+            // Check if all water particles are stopped
+            CheckVictoryCondition();
         }
     }
 
-    private void MoveNail(GameObject nailPart)
+    private void CheckVictoryCondition()
     {
-        Transform nailRoot = nailPart.transform.root;
-
-        // 1. Calculate remaining distance
-        float remaining = maxNailDepth - currentDepth;
-        if (remaining <= 0f) return; // nail fully hammered
-
-        // 2. Move nail by step
-        float moveStep = Mathf.Min(nailMoveDistance, remaining);
-        currentDepth += moveStep;
-
-        nailRoot.position += nailRoot.forward * moveStep; // move into wood
-
-        Debug.Log($"Moved nail {nailRoot.name} by {moveStep}. Current depth: {currentDepth}");
-
-        // 3. Check for WoodPlacement and stop water
-        WoodPlacement wood = nailRoot.GetComponentInParent<WoodPlacement>();
-        if (wood != null && goodHits >= hitsToStopParticles)
+        // Find all active water particles in the scene
+        GameObject[] waterObjects = GameObject.FindGameObjectsWithTag(waterParticleTag);
+        foreach (GameObject obj in waterObjects)
         {
-            wood.StopWaterUnderneath();
-            Debug.Log("Stopped water under this wood!");
+            ParticleSystem ps = obj.GetComponent<ParticleSystem>();
+            if (ps != null && ps.isPlaying)
+            {
+                return; // At least one particle is still active
+            }
         }
-    }
 
-
-
-    private void StopWaterParticles()
-    {
-        if (waterParticles != null && waterParticles.isPlaying)
+        // If we reach here, all particles are stopped
+        if (victoryUI != null)
         {
-            waterParticles.Stop();
-            Debug.Log("Water particle system stopped after max hits!");
+            victoryUI.SetActive(true);
+            Debug.Log("Congratulations! You saved your boat!");
         }
     }
 }

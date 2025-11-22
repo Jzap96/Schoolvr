@@ -1,24 +1,23 @@
-using System.Collections;
 using UnityEngine;
 
-public class DestroyMesh : MonoBehaviour
+public class TriggerMultipleCharacters : MonoBehaviour
 {
-    public GameObject key;
-
-    void Start()
-    {
-            key.SetActive(false);
-    }
+    [Header("Characters to Animate")]
+    public Animator[] characterAnimators; // Assign all character animators here
+    public string triggerName = "Play";   // Trigger parameter in Animator
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered by: " + other.name);
-
         if (other.CompareTag("Bottle"))
         {
-            Debug.Log("Bottle trigger detected!");
-           
-                key.SetActive(true);
+            // Loop through all assigned animators and trigger the animation
+            foreach (Animator animator in characterAnimators)
+            {
+                if (animator != null)
+                    animator.SetTrigger(triggerName);
+            }
+
+            Debug.Log("Triggered animation on all characters!");
         }
     }
 }
